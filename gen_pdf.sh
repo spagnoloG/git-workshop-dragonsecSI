@@ -14,4 +14,4 @@ else
   exit 1
 fi
 
-docker run --rm -t --net=host -v "`pwd`/slides":/slides astefanutti/decktape "$url/index.md" "git_workshop_2023.pdf" --size 1920x1080
+docker run --rm -t --net=host -v "`pwd`/slides":/slides astefanutti/decktape "$url/index.md" "git_workshop.pdf" --size 1920x1080

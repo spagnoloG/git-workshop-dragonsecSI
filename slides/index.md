@@ -3,7 +3,7 @@
 
 <img src="./img/DragonSec_logo.png" alt="logo" title="Logo" width="300"/> 
 
-Ljubljana FRI, December 2023
+Ljubljana FRI, December 2024 
 
 ---
 ### Kdo smo <!-- .element: style="text-align: left; font-size: 50px;" -->
@@ -77,7 +77,7 @@ medtem ko je GitHub spletna storitev, ki gradi na Gitu in dodaja funkcionalnosti
 ---
 ### Zakaj bi uporabljali Git?
 
-<img src="./img/why-git.webp" alt="logo" title="Logo" width="600"/>
+<img src="./img/meme_1.jpg" alt="logo" title="Logo" width="300"/>
 
 Note:
 
@@ -95,7 +95,7 @@ Medtem pa ce shranjujemo različne verzije v ločenih direktorijih, se lahko zgo
 
 ---
 
-<img src="./img/meme_1.jpg" alt="logo" title="Logo" width="400"/>
+<img src="./img/why-git.webp" alt="logo" title="Logo" width="600"/>
 
 ---
 #### Kaj je Diff?
@@ -115,18 +115,49 @@ Medtem pa ce shranjujemo različne verzije v ločenih direktorijih, se lahko zgo
 
 <div class="container">
    <div class="col">
-   .
-    <img src="./img/diff-a.png" alt="l1" title="l1" width="300"/>
+    <pre><code class="language-bash">
+    λ cat -n a.txt
+     1  AAAAA
+     2  BBBBB
+     3  CCCCC
+     4  DDDDD
+     5  EEEEE
+     6  FFFFF
+     7  GGGGG
+     8  HHHHH
+    </code></pre>
    </div>
 
    <div class="col">
-   .
-    <img src="./img/diff-b.png" alt="l2" title="l2" width="300"/>
+   <pre><code class="language-bash">
+   λ cat -n b.txt
+     1  BBBBB
+     2  AAAAA
+     3  CCCCC
+     4  DDDDD
+     5  IIIII
+     6  EEEEE
+     7  FFFFF
+     8  HHHHH
+     9  LLLLL
+   </code></pre>
    </div>
 
-   <div class="full-width">
-    <img src="./img/diff-a-b.png" alt="l3" title="l3" width="300"/> 
-   </div>
+   <div class="col">
+   <pre><code class="language-bash">
+   λ diff a.txt b.txt
+        1d0
+        < AAAAA
+        2a2
+        > AAAAA
+        4a5
+        > IIIII
+        7d7
+        < GGGGG
+        8a9
+        > LLLLL
+    </code></pre>
+    </div>
 </div>
 
 Note:
@@ -155,9 +186,9 @@ Basically recept kako priti iz datoteke A v datoteko B.
 
 ```bash
 λ ls -lah
-drwxr-xr-x spagnologasper users 4.0 KB ... 2023 .
-drwxr-xr-x spagnologasper users 4.0 KB ... 2023 ..
-drwxr-xr-x spagnologasper users 4.0 KB ... 2023 .git
+drwxr-xr-x spagnologasper users 4.0 KB ... 2024 .
+drwxr-xr-x spagnologasper users 4.0 KB ... 2024 ..
+drwxr-xr-x spagnologasper users 4.0 KB ... 2024 .git
 ```
 
 Note: Začnemo z git init, tako ustvarimo naš lokalni repozitorij.
@@ -345,7 +376,7 @@ Basically `git pull = git fetch + git merge`
 ```bash
 commit e44d7ef17a34fa9fa2d92ace8dd1296c06353d90 (HEAD -> main, origin/main, master)
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Tue Dec 12 22:02:03 2023 +0100
+Date:   Tue Dec 12 22:02:03 2024 +0100
 
     Zelo deskriptivno sporocilo!
 ```
@@ -475,13 +506,13 @@ Remote:
 
 * commit 634d79a74c2f7347c0afb8fb8305b523ee16d05a (HEAD -> feats1337, origin/feats1337)
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:06:49 2023 +0100
+| Date:   Tue Dec 12 23:06:49 2024 +0100
 |
 |     Dodaj vrstico v prvo datoteko
 |
 * commit e44d7ef17a34fa9fa2d92ace8dd1296c06353d90 (origin/main, master, main)
   Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-  Date:   Tue Dec 12 22:02:03 2023 +0100
+  Date:   Tue Dec 12 22:02:03 2024 +0100
 
       Zelo deskriptivno sporocilo!
 ```
@@ -493,31 +524,31 @@ Remote:
 ```bash
 * commit b62623b5451187faf463bf5f0e0a93ea0c1fbf45 (HEAD -> feats1337, origin/feats1337)
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:11:14 2023 +0100
+| Date:   Tue Dec 12 23:11:14 2024 +0100
 |
 |     Se ena vrstica
 |
 * commit e60b7db578566b1f4110e04d95580118a6a3160d
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:10:56 2023 +0100
+| Date:   Tue Dec 12 23:10:56 2024 +0100
 |
 |     Dodaj novo vrstico v datoteko
 |
 * commit 8a79fbcaefdd8f445f6ff1d4a5e693963f4772dc
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:10:23 2023 +0100
+| Date:   Tue Dec 12 23:10:23 2024 +0100
 |
 |     Uredi prvo datoteko se nekoliko
 |
 * commit 634d79a74c2f7347c0afb8fb8305b523ee16d05a
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:06:49 2023 +0100
+| Date:   Tue Dec 12 23:06:49 2024 +0100
 |
 |     Dodaj vrstico v prvo datoteko
 |
 * commit e44d7ef17a34fa9fa2d92ace8dd1296c06353d90 (origin/main, master, main)
   Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-  Date:   Tue Dec 12 22:02:03 2023 +0100
+  Date:   Tue Dec 12 22:02:03 2024 +0100
 
       Zelo deskriptivno sporocilo!
 ```
@@ -568,31 +599,31 @@ e44d7 -- [634d79 --  8a79f' -- e60b7' -- b62623']
 ```bash
 * commit b62623b5451187faf463bf5f0e0a93ea0c1fbf45 (HEAD -> main, origin/feats1337, feats1337)
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:11:14 2023 +0100
+| Date:   Tue Dec 12 23:11:14 2024 +0100
 |
 |     Se ena vrstica
 |
 * commit e60b7db578566b1f4110e04d95580118a6a3160d
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:10:56 2023 +0100
+| Date:   Tue Dec 12 23:10:56 2024 +0100
 |
 |     Dodaj novo vrstico v datoteko
 |
 * commit 8a79fbcaefdd8f445f6ff1d4a5e693963f4772dc
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:10:23 2023 +0100
+| Date:   Tue Dec 12 23:10:23 2024 +0100
 |
 |     Uredi prvo datoteko se nekoliko
 |
 * commit 634d79a74c2f7347c0afb8fb8305b523ee16d05a
 | Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-| Date:   Tue Dec 12 23:06:49 2023 +0100
+| Date:   Tue Dec 12 23:06:49 2024 +0100
 |
 |     Dodaj vrstico v prvo datoteko
 |
 * commit e44d7ef17a34fa9fa2d92ace8dd1296c06353d90 (origin/main, master)
   Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-  Date:   Tue Dec 12 22:02:03 2023 +0100
+  Date:   Tue Dec 12 22:02:03 2024 +0100
 
       Zelo deskriptivno sporocilo!
 ```
@@ -743,19 +774,19 @@ Ter uveljavimo spremembe:
 ```bash
 commit a1af9a2ce1e46f336e2a904149ded1078eedd43e
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:09:41 2023 +0100
+Date:   Wed Dec 13 00:09:41 2024 +0100
 
     Modify example.txt in main with conflicting content
 
 commit 2f12b6c100b20a7e1fc0ce64a902a3109e6edaee (feature-branch)
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:09:24 2023 +0100
+Date:   Wed Dec 13 00:09:24 2024 +0100
 
     Modify example.txt in feature-branch
 
 commit 9fdd5980c45b35dcbe7d0b84d9a82fa3e3babeb6
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:08:53 2023 +0100
+Date:   Wed Dec 13 00:08:53 2024 +0100
 
     Add example.txt with initial content
 
@@ -778,7 +809,7 @@ Po izboru se lahko vrnemo nazaj na stanje pred združevanjem vej.
 ```
 commit 9fdd5980c45b35dcbe7d0b84d9a82fa3e3babeb6 (HEAD -> main)
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:08:53 2023 +0100
+Date:   Wed Dec 13 00:08:53 2024 +0100
 
     Add example.txt with initial content
 ```
@@ -845,9 +876,9 @@ Recimo da nas zanima, kdo vse in kdaj je spreminjal datoteko `prva_datoteka.txt`
 ```
 
 ```
-^e44d7 (Gašper Spagnolo 2023-12-12 22:02:03 +0100 1) #TO JE PRVA DATOTEKA
-634d79 (Gašper Spagnolo 2023-12-12 23:06:49 +0100 2)
-b4fac5 (Gašper Spagnolo 2023-12-12 23:35:06 +0100 3)  1337 feature\n 1338 feature\n 1339 feature\n 1331 feature\n ojla\n ojla
+^e44d7 (Gašper Spagnolo 2024-12-12 22:02:03 +0100 1) #TO JE PRVA DATOTEKA
+634d79 (Gašper Spagnolo 2024-12-12 23:06:49 +0100 2)
+b4fac5 (Gašper Spagnolo 2024-12-12 23:35:06 +0100 3)  1337 feature\n 1338 feature\n 1339 feature\n 1331 feature\n ojla\n ojla
 ```
 
 
@@ -913,13 +944,13 @@ Izberemo commit, ki ga želimo cherry pickati:
 ```bash
 commit 88b2b262d71fbf82b5ceccd5cbd71a1f7fc0e605 (HEAD -> cpp)
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:52:32 2023 +0100
+Date:   Wed Dec 13 00:52:32 2024 +0100
 
     Second change in cpp branch
 
 commit b18a08c1602c623df9aed2bd245a3928e01a3edb
 Author: Gašper Spagnolo <gasper.spagnolo@outlook.com>
-Date:   Wed Dec 13 00:52:22 2023 +0100
+Date:   Wed Dec 13 00:52:22 2024 +0100
 
     First change in cpp branch
 ```
@@ -937,7 +968,7 @@ Recimo da želimo prvo spremembo: `b18a..`.
 ```bash
  git cherry-pick b18a08c1602c623df9aed2bd245a3928e01a3edb
 [main 4e030e9] First change in cpp branch
- Date: Wed Dec 13 00:52:22 2023 +0100
+ Date: Wed Dec 13 00:52:22 2024 +0100
  1 file changed, 1 insertion(+)
  create mode 100644 file.txt
 ```
