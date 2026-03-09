@@ -1,9 +1,9 @@
 
 ### Git workshop 
 
-<img src="./img/DragonSec_logo.png" alt="logo" title="Logo" width="300"/> 
+<img src="./img/dsecxeestec.png" alt="logo" title="Logo" width="300"/> 
 
-Ljubljana FRI, December 2024 
+Ljubljana FRI, Marec 2026 
 
 ---
 ### Kdo smo <!-- .element: style="text-align: left; font-size: 50px;" -->
@@ -35,6 +35,21 @@ Ljubljana FRI, December 2024
 </div>
 
 ---
+
+### Kako shranjevati različne verzije?
+
+<img src="./img/meme_1.jpg" alt="logo" title="Logo" width="300"/>
+
+---
+
+<img src="./img/git-meme-ctlz.jpg" alt="logo" title="Logo" width="600"/>
+
+---
+
+<img src="./img/why-git.webp" alt="logo" title="Logo" width="600"/>
+
+---
+
 ### GIT
 
 Kaj sploh je git?
@@ -75,29 +90,7 @@ Ključna razlika je torej ta, da je Git orodje, ki deluje lokalno in omogoča na
 medtem ko je GitHub spletna storitev, ki gradi na Gitu in dodaja funkcionalnosti za sodelovanje in gostovanje kode.
 
 ---
-### Zakaj bi uporabljali Git?
 
-<img src="./img/meme_1.jpg" alt="logo" title="Logo" width="300"/>
-
-Note:
-
-Git je napreden sistem za nadzor različic, ki omogoča razvijalcem učinkovito sledenje in upravljanje sprememb v kodi. 
-V primerjavi z ročnim shranjevanjem različnih verzij v ločenih direktorijih, Git ponuja boljšo organizacijo, 
-varčuje s prostorom z inteligentnim shranjevanjem sprememb, olajša združevanje sprememb iz različnih vej (branches) 
-in omogoča enostavno povrnitev na prejšnje verzije
-
-Medtem pa ce shranjujemo različne verzije v ločenih direktorijih, se lahko zgodi, da se izgubijo ali pa jih je težko najti.
-
-
----
-
-<img src="./img/git-meme-ctlz.jpg" alt="logo" title="Logo" width="600"/>
-
----
-
-<img src="./img/why-git.webp" alt="logo" title="Logo" width="600"/>
-
----
 #### Kaj je Diff?
 
 <style>
@@ -300,6 +293,10 @@ Changes to be committed:
 ```bash
 λ git commit -m "Zelo deskriptivno sporocilo!"
 ```
+---
+### Ustvarjanje repozitorija na GITHUBU
+
+<img src="./img/creating-repo.png" alt="logo" title="Logo" width="400"/>
 
 ---
 ### Kako dodamo oddaljeni repozitorij?
@@ -308,13 +305,13 @@ Changes to be committed:
 
 ```bash
 λ git remote add origin \
-    https://gitea.spanskiduh.dev/spanskiduh/test-repo.git
+    git@github.com:spagnoloG/test-repo.git
 ```
 
 V datoteko `.git/config` se doda vrstica:
 ```
 [remote "origin"]
-        url = https://gitea.spanskiduh.dev/spanskiduh/test-repo.git
+        url = git@github.com:spagnoloG/test-repo.git 
         fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 
@@ -328,17 +325,12 @@ V datoteko `.git/config` se doda vrstica:
 ```
 
 ---
-### Sinhronizacija lokalnega repozitorija z oddaljenim
-
-<img src="./img/pushed-to-git.png" alt="logo" title="Logo" width="800"/> 
-
----
 #### Kloniranje oddaljenega repozitorija
 
-<img src="./img/ffmpeg.png" alt="logo" title="Logo" width="1000"/>
+<img src="./img/example-branches.png" alt="logo" title="Logo" width="1000"/>
 
 ```bash
-λ git clone https://github.com/FFmpeg/FFmpeg.git
+λ git clone https://github.com/thurwitz/example-branches.git 
 ```
 
 ---
@@ -360,6 +352,12 @@ pridobiti najnovejše spremembe.
 ```
 
 Basically `git pull = git fetch + git merge`
+
+
+```
+λ git fetch 
+λ git merge origin/main # r/main
+```
 
 
 ---
